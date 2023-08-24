@@ -1,0 +1,33 @@
+/* CSS HEX */
+:root {
+    --celestial-blue: #1D97C9ff;
+    --blue-green: #3D9AC0ff;
+    --sky-blue: #5AC2DCff;
+    --pacific-cyan: #30B0D0ff;
+    --berkeley-blue: #0F3459ff;
+}
+
+/* CSS HSL */
+:root {
+    --celestial-blue-hsl: hsla(197, 75%, 45%, 1);
+    --blue-green-hsl: hsla(197, 52%, 50%, 1);
+    --sky-blue-hsl: hsla(192, 65%, 61%, 1);
+    --pacific-cyan-hsl: hsla(192, 63%, 50%, 1);
+    --berkeley-blue-hsl: hsla(210, 71%, 20%, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--berkeley-blue);
+
+}
+
+.bgWave {
+    width: 600px;
+    filter: url(#wavy);
+}
