@@ -17,17 +17,90 @@
 }
 
 body {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: var(--berkeley-blue);
+    background-color: var(--berkeley-blue); */
 
 }
 
 .bgWave {
     width: 600px;
     filter: url(#wavy);
+    z-index: -1;
+    height: 200px;
+    width: 100%;
+    opacity: 0.9;
+    transform: translateY(-20px);
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    /* opacity: 0.5; */
+}
+
+.frame_1--base {
+    /* z-index: 2; */
+    /* animation: rotate 3s alternate infinite; */
+    /* mask-mode: luminance; */
+    /* mask-image: url(bg-glow.png); */
+}
+
+@keyframes rotate {
+    0% {
+        /* mix-blend-mode: multiply; */
+        filter: brightness(0.7) contrast(1.1);
+    }
+
+    100% {
+        /* mix-blend-mode: normal; */
+        filter: brightness(1.7) contrast(1.1) blur(1.5px);
+    }
+}
+
+@keyframes vegetaHighlight {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+
+.frame_1 {
+    z-index: 10;
+    animation: vegetaHighlight 1s infinite;
+}
+
+.delay {
+    animation-delay: 2s;
+}
+
+.background {
+    position: relative;
+    z-index: -99;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.wrapper {
+    border: #1D97C9ff 2px solid;
+    overflow: hidden;
+    height: 100px;
+    position: relative;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
 }
